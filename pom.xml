@@ -39,30 +39,30 @@
                 <version>0.8.7</version>
                 <executions>
                     <execution>
-                        <id>prepare-agent</id>
-                        <phase>initialize</phase>
+                        <id>prepare-agent-zerospirit</id>
+<!--                        <phase>initialize</phase>-->
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
                     <execution>
-                        <id>report</id>
-                        <phase>verify</phase>
+                        <id>report-mynewreport</id>
+<!--                        <phase>verify</phase>-->
                         <goals>
                             <goal>report</goal>
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
-                    <haltOnFailure>false</haltOnFailure>
+                    <haltOnFailure>true</haltOnFailure>
                     <rules>
                         <rule>
                             <element>BUNDLE</element>
                             <limits>
                                 <limit>
-                                    <counter>INSTRUCTION</counter>
+                                    <counter>INSTRUCTION-zerospirit</counter>
                                     <value>COVEREDRATIO</value>
-                                    <minimum>1.00</minimum>
+                                    <minimum>100%</minimum>
                                 </limit>
                                 <limit>
                                     <counter>CLASS</counter>
